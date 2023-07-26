@@ -391,6 +391,7 @@ paths:
                           fulfillment_id:
                             - 70fa40c8-252b-11ee-be56-0242ac120002
                             - 75a55c66-252b-11ee-be56-ef5464fda652
+                            
       responses:
         "200":
           description: Acknowledgement of message received
@@ -1440,10 +1441,10 @@ paths:
                             time:
                               timestamp: T10:30Z
                         customer:
-                            person:
-                              id: 61-8787-9274-4422
-                              creds:
-                                - url: example@ndhm
+                          person:
+                            id: 61-8787-9274-4422
+                            creds:
+                              - url: example@ndhm
                       quote:
                         price:
                           currency: INR
@@ -1508,7 +1509,7 @@ paths:
               properties:
                 context:
                   allOf:
-                    - $ref: '#/components/schemas/Context'
+                    - $ref: "#/components/schemas/Context"
                     - properties:
                         action:
                           enum:
@@ -1519,11 +1520,11 @@ paths:
                   type: object
                   properties:
                     order:
-                      $ref: '#/components/schemas/Order'
+                      $ref: "#/components/schemas/Order"
                   required:
                     - order
                 error:
-                  $ref: '#/components/schemas/Error'
+                  $ref: "#/components/schemas/Error"
               required:
                 - context
 
@@ -1581,14 +1582,14 @@ paths:
                             time:
                               timestamp: T10:30Z
                         customer:
-                            person:
-                              creds:
-                                - type: health_id
-                                  id: 61-8787-9274-4422
-                                - type: phr_address
-                                  url: example@ndhm
+                          person:
+                            creds:
+                              - type: health_id
+                                id: 61-8787-9274-4422
+                              - type: phr_address
+                                url: example@ndhm
                         tags:
-                          - list: 
+                          - list:
                               descriptor:
                                 name: teleconf_url
                               value: https://us06web.zoom.us/j/82071160538
@@ -1671,14 +1672,14 @@ paths:
                             time:
                               timestamp: T10:30Z
                         customer:
-                            person:
-                              creds:
-                                - type: health_id
-                                  id: 61-8787-9274-4422
-                                - type: phr_address
-                                  url: example@ndhm
+                          person:
+                            creds:
+                              - type: health_id
+                                id: 61-8787-9274-4422
+                              - type: phr_address
+                                url: example@ndhm
                         tags:
-                          - list: 
+                          - list:
                               descriptor:
                                 name: teleconf_url
                               value: https://us06web.zoom.us/j/82071160538
@@ -1843,14 +1844,14 @@ paths:
                             time:
                               timestamp: T10:30Z
                         customer:
-                            person:
-                              creds:
-                                - type: health_id
-                                  id: 61-8787-9274-4422
-                                - type: phr_address
-                                  url: example@ndhm
+                          person:
+                            creds:
+                              - type: health_id
+                                id: 61-8787-9274-4422
+                              - type: phr_address
+                                url: example@ndhm
                         tags:
-                          - list: 
+                          - list:
                               descriptor:
                                 name: teleconf_url
                               value: https://us06web.zoom.us/j/82071160538
@@ -1933,14 +1934,14 @@ paths:
                             time:
                               timestamp: T10:30Z
                         customer:
-                            person:
-                              creds:
-                                - type: health_id
-                                  id: 61-8787-9274-4422
-                                - type: phr_address
-                                  url: example@ndhm
+                          person:
+                            creds:
+                              - type: health_id
+                                id: 61-8787-9274-4422
+                              - type: phr_address
+                                url: example@ndhm
                         tags:
-                          - list: 
+                          - list:
                               descriptor:
                                 name: teleconf_url
                               value: https://us06web.zoom.us/j/82071160538
