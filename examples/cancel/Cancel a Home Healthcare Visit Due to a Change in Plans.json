@@ -1,0 +1,24 @@
+{
+  "context": {
+    "domain": "nic2004:85110",
+    "country": "IND",
+    "city": "std:080",
+    "action": "cancel",
+    "core_version": "1.1.0",
+    "bap_id": "https://example-bap.com/",
+    "bap_uri": "https://example-bap.com/dhp.io",
+    "bpp_id": "https://home-healthcare-provider.com",
+    "bpp_uri": "https://home-healthcare-provider.com/beckn/",
+    "transaction_id": "h1o2m3e4-12345",
+    "message_id": "c1a2n3c4e5l6-78901",
+    "timestamp": "2023-09-08T17:30:00.052Z"
+  },
+  "message": {
+    "order_id": "home-healthcare-visit-678",
+    "cancellation_reason_id": "4",
+    "descriptor": {
+      "short_desc": "Change in Plans",
+      "long_desc": "The patient's plans have changed, and the visit is no longer needed."
+    }
+  }
+}

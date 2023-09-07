@@ -1,0 +1,103 @@
+{
+  "context": {
+    "domain": "nic2004:59120",
+    "country": "IND",
+    "city": "std:081",
+    "action": "on_select",
+    "core_version": "1.1.0",
+    "bap_id": "https://pharmacy-bap.com",
+    "bap_uri": "https://api.pharmacy-bap.com/beckn/",
+    "bpp_id": "https://pharmacy-store.com",
+    "bpp_uri": "https://api.pharmacy-store.com/beckn/",
+    "transaction_id": "4f632d81-92a1-4dbd-8274-7c536f9bdf0d",
+    "message_id": "c57cc72e-7c9d-4bb7-a6df-9a53a32ef1c2",
+    "timestamp": "2023-09-15T14:45:00Z"
+  },
+  "message": {
+    "order": {
+      "id": "123456",
+      "items": [
+        {
+          "id": "201",
+          "descriptor": {
+            "name": "Pain Reliever"
+          },
+          "fulfillment_id": "3",
+          "price": {
+            "currency": "INR",
+            "value": "50"
+          }
+        },
+        {
+          "id": "202",
+          "descriptor": {
+            "name": "Cough Syrup"
+          },
+          "fulfillment_id": "4",
+          "price": {
+            "currency": "INR",
+            "value": "40"
+          }
+        }
+      ],
+      "provider": {
+        "id": "abc-pharmacy",
+        "descriptor": {
+          "name": "ABC Pharmacy"
+        }
+      },
+      "fulfillment": {
+        "id": "3",
+        "start": {
+          "location": {
+            "descriptor": {
+              "name": "ABC Pharmacy"
+            },
+            "gps": "12.965365, 77.607297"
+          },
+          "time": {
+            "timestamp": "2023-09-16T09:00:00Z"
+          }
+        },
+        "end": {
+          "location": {
+            "descriptor": {
+              "name": "ABC Pharmacy"
+            },
+            "gps": "12.965365, 77.607297"
+          },
+          "time": {
+            "timestamp": "2023-09-16T18:00:00Z"
+          }
+        }
+      },
+      "quote": {
+        "price": {
+          "value": "90",
+          "currency": "INR"
+        },
+        "breakup": [
+          {
+            "title": "Pain Reliever",
+            "price": {
+              "currency": "INR",
+              "value": "50"
+            }
+          },
+          {
+            "title": "Cough Syrup",
+            "price": {
+              "currency": "INR",
+              "value": "40"
+            }
+          }
+        ]
+      },
+      "payment": {
+        "id": "2",
+        "mode": "CASH_ON_DELIVERY",
+        "status": "PENDING"
+      }
+    }
+  }
+}

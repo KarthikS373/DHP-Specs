@@ -1,0 +1,38 @@
+{
+  "context": {
+    "domain": "nic2004:46494",
+    "country": "IND",
+    "city": "std:080",
+    "action": "update",
+    "core_version": "1.1.0",
+    "bap_id": "https://example-bap.com/",
+    "bap_uri": "https://example-bap.com/dhp.io",
+    "bpp_id": "https://pharmacy-provider.com",
+    "bpp_uri": "https://pharmacy-provider.com/beckn/",
+    "transaction_id": "c1a2n3u4p5d6-12345",
+    "message_id": "update-item-1",
+    "timestamp": "2023-09-09T12:00:00.052Z"
+  },
+  "message": {
+    "update_target": "item",
+    "order": {
+      "id": "medication-order-1",
+      "items": [
+        {
+          "id": "updated-item-1",
+          "descriptor": {
+            "name": "Updated Medication Name"
+          },
+          "quantity": 5
+        },
+        {
+          "id": "updated-item-2",
+          "descriptor": {
+            "name": "New Medication Name"
+          },
+          "quantity": 3
+        }
+      ]
+    }
+  }
+}

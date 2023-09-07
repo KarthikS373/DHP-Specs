@@ -1,0 +1,19 @@
+{
+  "context": {
+    "domain": "nic2004:85110",
+    "country": "IND",
+    "city": "std:080",
+    "action": "support",
+    "core_version": "1.1.0",
+    "bap_id": "https://example-bap.com/",
+    "bap_uri": "https://example-bap.com/dhp.io",
+    "bpp_id": "https://healthcare-provider.com",
+    "bpp_uri": "https://healthcare-provider.com/beckn/",
+    "transaction_id": "support-prescription-query",
+    "message_id": "support-healthcare-5",
+    "timestamp": "2023-09-15T14:45:00.052Z"
+  },
+  "message": {
+    "ref_id": "prescription-query-222"
+  }
+}

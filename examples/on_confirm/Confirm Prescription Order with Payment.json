@@ -1,0 +1,109 @@
+{
+  "context": {
+    "domain": "nic2004:47112",
+    "action": "on_confirm",
+    "version": "1.0.0",
+    "message_id": "a48b1be2-42a7-4b45-bc4e-2e89b86f7e6d",
+    "timestamp": "2023-08-21T12:30:00.000Z",
+    "ttl": "PT15M",
+    "location": {
+      "country": "IND",
+      "city": "std:080"
+    },
+    "transaction_id": "e3ddbbec-8a95-4b68-bf2c-3c087b92c3b0"
+  },
+  "message": {
+    "order": {
+      "id": "98765",
+      "provider": {
+        "id": "2",
+        "descriptor": {
+          "name": "ABC Pharmacy"
+        }
+      },
+      "items": [
+        {
+          "id": "10",
+          "descriptor": {
+            "name": "Medication"
+          },
+          "fulfillment_id": "22",
+          "provider_id": "2"
+        }
+      ],
+      "billing": {
+        "name": "Jane Smith",
+        "address": "123 Main Street, Bangalore, 560001",
+        "email": "jane.smith@example.com",
+        "phone": "+91-8888888888"
+      },
+      "fulfillment": {
+        "id": "22",
+        "type": "IN-STORE-PICKUP",
+        "agent": {
+          "person": {
+            "id": "5",
+            "name": "Pharmacist John",
+            "gender": "male",
+            "image": "https://image/of/pharmacist.png",
+            "creds": [
+              {
+                "id": "pdc:7865-09876"
+              }
+            ]
+          },
+          "state": {
+            "descriptor": {
+              "code": "READY_FOR_PICKUP"
+            }
+          },
+          "stops": [
+            {
+              "type": "start",
+              "time": {
+                "timestamp": "T14:00Z"
+              }
+            },
+            {
+              "type": "end",
+              "time": {
+                "timestamp": "T14:15Z"
+              }
+            }
+          ]
+        }
+      },
+      "quote": {
+        "price": {
+          "currency": "INR",
+          "value": "50"
+        },
+        "breakup": [
+          {
+            "title": "medication",
+            "price": {
+              "currency": "INR",
+              "value": "40"
+            }
+          },
+          {
+            "title": "service_fee",
+            "price": {
+              "currency": "INR",
+              "value": "10"
+            }
+          }
+        ]
+      },
+      "payment": {
+        "type": "ON-FULFILLMENT",
+        "status": "PAID",
+        "params": {
+          "amount": "50",
+          "currency": "INR",
+          "transaction_status": "PAID"
+        }
+      }
+    }
+  }
+}

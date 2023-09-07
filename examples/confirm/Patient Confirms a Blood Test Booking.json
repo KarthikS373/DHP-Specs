@@ -1,0 +1,60 @@
+{
+  "context": {
+    "domain": "nic2004:85110",
+    "action": "confirm",
+    "version": "0.7.1",
+    "bap_id": "https://example-bap.com/",
+    "bap_uri": "https://example-bap.com/dhp.io",
+    "message_id": "d6c578c1-aa43-4f29-9e1e-82c39b02456d",
+    "timestamp": "2023-09-20T08:45:00.052Z",
+    "ttl": "PT10M",
+    "location": {
+      "city": "std:080",
+      "country": "IND"
+    }
+  },
+  "message": {
+    "order": {
+      "id": "c4b0b371-0a6f-4a14-a49d-8cfd32c1e9a7",
+      "provider": {
+        "id": "a8792cde-94e3-42d2-9b3b-1a7283c7f97e",
+        "descriptor": {
+          "name": "Health Lab ABC"
+        }
+      },
+      "items": [
+        {
+          "id": "2679a2e8-6d0e-4f4f-a0c5-5d73aa8a4d08",
+          "descriptor": {
+            "name": "Blood Test",
+            "code": "BLOOD"
+          },
+          "billing": {
+            "name": "Sarah Johnson",
+            "address": "456 Oak Street, Townsville, 67890",
+            "city": {
+              "name": "Townsville"
+            },
+            "state": {
+              "name": "Stateland"
+            },
+            "email": "sarah.johnson@example.com",
+            "phone": "+1-987-654-3210"
+          },
+          "fulfillment": {
+            "customer": {
+              "person": {
+                "id": "1234-5678-9876-5432",
+                "creds": [
+                  {
+                    "url": "example@healthlab.com"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

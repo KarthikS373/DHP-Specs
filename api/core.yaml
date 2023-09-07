@@ -391,7 +391,185 @@ paths:
                           fulfillment_id:
                             - 70fa40c8-252b-11ee-be56-0242ac120002
                             - 75a55c66-252b-11ee-be56-ef5464fda652
-                            
+
+              Request a quote for booking an ambulance from a particular location:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: select
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    transaction_id: 7afe44fd-d947-4a0a-81bc-d286784df2c1
+                    message_id: 85a422c4-2867-4d72-b5f5-d31588e2f7c5
+                    timestamp: "2023-07-16T16:00:24.052Z"
+                    ttl: PT10M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      provider:
+                        id: 75a55c66-252b-11e
+                      items:
+                        - id: 5777a0bf-9a08-49aa-a97d-1e5561a9622e
+                          descriptor:
+                            name: Advance Life Support
+                          add_ons:
+                            - id: c63a05de
+                              descriptor:
+                                name: CPR setup
+                      fulfillment:
+                        stops:
+                          - type: start
+                            time:
+                              timestamp: T10:00Z
+                            location:
+                              gps: 12.910458, 77.543089
+                          - type: end
+                            time:
+                              timestamp: T10:15Z
+                            location:
+                              gps: 12.9535139, 77.5710434
+
+              Selecting the desired blood bank service:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: select
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    transaction_id: 7afe44fd-d947-4a0a-81bc-d286784df2c1
+                    message_id: 85a422c4-2867-4d72-b5f5-d31588e2f7c5
+                    timestamp: "2023-07-16T16:00:24.052Z"
+                    ttl: PT10M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      provider:
+                        id: 75a55c66-252b-11e
+                      items:
+                        - id: 550e8400-e29b-41d4-a716-446655441202
+                          fulfillment_ids:
+                            - id: "2"
+                            - id: "4"
+
+              Emergency requirement of 2 units of B+ blood from blood banks near me:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: select
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    transaction_id: 7afe44fd-d947-4a0a-81bc-d286784df2c1
+                    message_id: 85a422c4-2867-4d72-b5f5-d31588e2f7c5
+                    timestamp: "2023-07-16T16:00:24.052Z"
+                    ttl: PT10M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      provider:
+                        id: 75a55c66-252b-11e
+                      type: EMERGENCY
+                      items:
+                        - id: 550e8400-e29b-41d4-a716-446655441202
+                          descriptor:
+                            name: B+ blood
+                          quantity:
+                            selected: 2
+                          fulfillment_ids:
+                            - id: "2"
+                            - id: "4"
+                      fulfillment:
+                        stops:
+                          - type: start
+                            location:
+                              gps: 12.910458, 77.543089
+
+              Select diagnostics for bones from a particular provider:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: select
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    transaction_id: 7afe44fd-d947-4a0a-81bc-d286784df2c1
+                    message_id: 85a422c4-2867-4d72-b5f5-d31588e2f7c5
+                    timestamp: "2023-07-16T16:00:24.052Z"
+                    ttl: PT10M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      provider:
+                        id: 75a55c66-252b-11e
+                      items:
+                        - id: 550e8400-e29b-41d4-a716-446655441202
+                          descriptor:
+                            name: MRI Scan
+                          fulfillment_ids:
+                            - id: "2"
+                            - id: "4"
+
+              Select a particular medicine for fever from a particular provider:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: select
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    transaction_id: 7afe44fd-d947-4a0a-81bc-d286784df2c1
+                    message_id: 85a422c4-2867-4d72-b5f5-d31588e2f7c5
+                    timestamp: "2023-07-16T16:00:24.052Z"
+                    ttl: PT10M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      provider:
+                        id: 75a55c66-252b-11e
+                      items:
+                        - id: 550e8400-e29b-41d4-a716-446655441202
+                          descriptor:
+                            name: Paracetamol
+                          fulfillment_ids:
+                            - id: "7"
+
+              Select a specific healthcare provider's service:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: select
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    transaction_id: 7afe44fd-d947-4a0a-81bc-d286784df2c1
+                    message_id: 85a422c4-2867-4d72-b5f5-d31588e2f7c5
+                    timestamp: "2023-07-16T16:00:24.052Z"
+                    ttl: PT10M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      provider:
+                        id: 675eecec-2da8-41e1-9303-3aeac992bb7e
+                      items:
+                        - id: 550e8400-e29b-41d4-a716-446655441202
+                          fulfillment_ids:
+                            - id: "3"
+                            - id: "5"
+
       responses:
         "200":
           description: Acknowledgement of message received
@@ -489,6 +667,130 @@ paths:
                             id: 61-8787-9274-4422
                             creds:
                               - url: example@ndhm
+
+              Patient Initiates Booking for a Specific Healthcare service:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: init
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    message_id: f243d75d-1fc8-4c15-ae74-7af398c13b44
+                    timestamp: "2023-07-20T14:30:00.052Z"
+                    ttl: PT15M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      provider:
+                        id: "3"
+                      items:
+                        - id: e1a89270-9e9f-4783-824c-7e869d7e4897
+                          fulfillment_id:
+                            - 99e010ce-252b-11ee-be56-0242ac120002
+                            - 9e161fa3-252b-11ee-be56-ef5464fda652
+                      billing:
+                        name: ohn Doe
+                        address: Apartment 45, Hill View Residency, Bannerghatta Road, 560076
+                        city:
+                          name: bangalore
+                        state:
+                          name: karnataka
+                        email: john.doe@example.com
+                        phone: +91-7777777777
+                      fulfillment:
+                        customer:
+                          person:
+                            id: 63-5678-1234-5678
+                            creds:
+                              - url: yetanother@example.com
+
+              Patient Initiates Booking for Healthcare Services Under a Specific category:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: init
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    message_id: 2e1f0ce3-91e3-43f4-b2b6-1a8f64ea7bb1
+                    timestamp: "2023-07-22T10:45:00.052Z"
+                    ttl: PT10M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      provider:
+                        id: "4"
+                      items:
+                        - id: f3f1a5c4-5da2-41f9-8e17-ecb0df1c9bb5
+                          fulfillment_id:
+                            - ae55001e-252b-11ee-be56-0242ac120002
+                            - b0c3f7c2-252b-11ee-be56-ef5464fda652
+                        - id: f2d0f8b0-26e5-4ce6-8f3e-536d8ae8ac45
+                          fulfillment_id:
+                            - d1d42dd2-252b-11ee-be56-0242ac120002
+                            - d4d2c020-252b-11ee-be56-ef5464fda652
+                      billing:
+                        name: John Doe
+                        address: Flat 102, Serene Springs, JP Nagar, 560078
+                        city:
+                          name: bangalore
+                        state:
+                          name: karnataka
+                        email: john.doe@example.com
+                        phone: +91-8888888888
+                      fulfillment:
+                        customer:
+                          person:
+                            id: 64-4321-5678-1234
+                            creds:
+                              - url: more@example.com
+
+              Patient Initiates Booking for a Cardiologist with 5+ Years of Experience Who Can Speak Kannada:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: init
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    message_id: 9bfc2081-4e34-4f0b-9d7b-d0ad87de4a80
+                    timestamp: "2023-07-30T13:30:00.052Z"
+                    ttl: PT15M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      provider:
+                        id: "6"
+                      items:
+                        - id: xyz5678-ijkl-4321-efgh-56781234abcd
+                          fulfillment_id:
+                            - 8f867070-252b-11ee-be56-0242ac120002
+                            - 8f867070-252b-11ee-be56-ef5464fda652
+                      billing:
+                        name: Rajesh Kumar
+                        address: Villa 5, Green Valley, Malleshwaram, 560012
+                        city:
+                          name: bangalore
+                        state:
+                          name: karnataka
+                        email: rajesh.kumar@example.com
+                        phone: +91-9999999999
+                      fulfillment:
+                        agent:
+                          person:
+                            id: 65-1234-5678-8765
+                            exp: gt 5Y
+                            lang: kan
+                            creds:
+                              - url: someone@example.com
+
       responses:
         "200":
           description: Acknowledgement of message received
@@ -546,6 +848,216 @@ paths:
               required:
                 - context
                 - message
+
+            examples:
+              Patient confirms the booking of a consultation slot in a given doctor’s schedule:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: confirm
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    message_id: 85a422c4-2867-4d72-b5f5-d31588e2f7c5
+                    timestamp: "2023-07-16T16:00:24.052Z"
+                    ttl: PT15M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      provider:
+                        id: "1"
+                      items:
+                        - id: c63a05de-242f-4314-a748-323f71a1d3b1
+                          fulfillment_id:
+                            - 70fa40c8-252b-11ee-be56-0242ac120002
+                            - 75a55c66-252b-11ee-be56-ef5464fda652
+                      billing:
+                        name: John Doe
+                        address: Door 12, Salarpuria Greenage, Street No 7, Hosur Road, 560068
+                        city:
+                          name: bangalore
+                        state:
+                          name: karnataka
+                        email:
+
+              Patient confirms the booking of an ambulance from a particular location:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: confirm
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    message_id: 85a422c4-2867-4d72-b5f5-d31588e2f7c5
+                    timestamp: "2023-07-16T16:00:24.052Z"
+                    ttl: PT15M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      provider:
+                        id: 75a55c66-252b-11e
+                      items:
+                        - id: 5777a0bf-9a08-49aa-a97d-1e5561a9622e
+                          descriptor:
+                            name: Advance Life Support
+                          add_ons:
+                            - id: c63a05de
+                              descriptor:
+                                name: CPR setup
+                      fulfillment:
+                        stops:
+                          - type: start
+                            time:
+                              timestamp: T10:00Z
+                            location:
+                              gps: 12.910458, 77.543089
+                          - type: end
+                            time:
+                              timestamp: T10:15Z
+                            location:
+                              gps: 12.9535139, 77.5710434
+
+              Patient confirms the booking of a particular healtchare service:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: confirm
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    message_id: d6c578c1-aa43-4f29-9e1e-82c39b02456d
+                    timestamp: "2023-08-15T14:00:00.052Z"
+                    ttl: PT5M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      id: a25bc3ee-82f2-4e65-bd9a-5c0ea3b2f316
+                      provider:
+                        id: f812a8ce-482a-4f95-930a-2be92e7f7497
+                        descriptor:
+                          name: Health Clinic XYZ
+                      items:
+                        - id: 834d7c64-60c9-42a0-97a9-87325a23f1f5
+                          descriptor:
+                            name: General Checkup
+                            code: CHECKUP
+                        - id: d2ff0fb4-1c12-45b0-b187-c72b45a9d6a2
+                          descriptor:
+                            name: Blood Test
+                            code: BLOOD
+                        - id: f91a8b9a-88a2-46f2-9120-08747c8b3e2b
+                          descriptor:
+                            name: X-Ray
+                            code: XRAY
+                          billing:
+                            name: John Smith
+                            address: 123 Main Street, Cityville, 56789
+                            city:
+                              name: Cityville
+                            state:
+                              name: Stateville
+                            email: john.smith@example.com
+                            phone: +1-123-456-7890
+                          fulfillment:
+                            customer:
+                              person:
+                                id: 9876-5432-1234-5678
+                                creds:
+                                  - url: example@healthcare.com
+
+              Patient confirms a healthcare lab test booking:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: confirm
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    message_id: 5fe4d6f7-3e8c-40d1-b9d5-22c4ef5aee5c
+                    timestamp: "2023-08-16T10:30:00.052Z"
+                    ttl: PT5M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      id: c4b0b371-0a6f-4a14-a49d-8cfd32c1e9a7
+                      provider:
+                        id: a8792cde-94e3-42d2-9b3b-1a7283c7f97e
+                        descriptor:
+                          name: Health Lab ABC
+                      items:
+                        - id: 2679a2e8-6d0e-4f4f-a0c5-5d73aa8a4d08
+                          descriptor:
+                            name: Blood Test
+                            code: BLOOD
+                          billing:
+                            name: Sarah Johnson
+                            address: 456 Oak Street, Townsville, 67890
+                            city:
+                              name: Townsville
+                            state:
+                              name: Stateland
+                            email: sarah.johnson@example.com
+                            phone: +1-987-654-3210
+                          fulfillment:
+                            customer:
+                              person:
+                                id: 1234-5678-9876-5432
+                                creds:
+                                  - url: example@healthlab.com
+
+              Patient confirms the booking of a particular healthcare service under a specific category:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: confirm
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    message_id: a1b2c3d4-e5f6-4g7h-8i9j-klmno1p2q3r4
+                    timestamp: "2023-09-07T15:30:00.052Z"
+                    ttl: PT5M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order:
+                      id: abcdef12-3456-7890-1234-567890abcdef
+                      provider:
+                        id: xyz-provider-123
+                        descriptor:
+                          name: HealthCare Center Z
+                      items:
+                        - id: 12345678-90ab-cdef-1234-567890abcdef
+                          descriptor:
+                            name: MRI Scan
+                            code: MRISCAN
+                            category:
+                              name: Diagnostic Imaging
+                              code: DIAGIMAGING
+                          billing:
+                            name: Jane Doe
+                            address: 789 Elm Street, Medtown, 54321
+                            city:
+                              name: Medtown
+                            state:
+                              name: HealthState
+                            email: jane.doe@example.com
+                            phone: +1-234-567-8901
+                          fulfillment:
+                            customer:
+                              person:
+                                id: 5678-9012-abcd-3456-7890efabcd12
+                                creds:
+                                  - url: example@healthcarez.com
+
       responses:
         "200":
           description: Acknowledgement of message received
@@ -603,6 +1115,79 @@ paths:
               required:
                 - context
                 - message
+
+            examples:
+              Patient requests the status of a particular order:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: status
+                    version: 0.7.1
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/
+                    message_id: 85a422c4-2867-4d72-b5f5-d31588e2f7c5
+                    timestamp: "2023-07-16T16:00:24.052Z"
+                    ttl: PT5M
+                    location:
+                      city: std:080
+                      country: IND
+                  message:
+                    order_id: 75a55c66-252b-11ee-be56-ef5464fda652
+
+              Patient gets the latest fulfillment status of a healthcare service booking:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: status
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://example-bpp.com
+                    bpp_uri: https://example-bpp.com/beckn/
+                    transaction_id: a1b2c3d4-e5f6-4g7h-8i9j-klmno1p2q3r4
+                    message_id: x1y2z3a4-b5c6-7d8e-9f0g-1h2i3j4k5l6m
+                    timestamp: "2023-09-07T16:45:00.052Z"
+                  message:
+                    order_id: abcdef12-3456-7890-1234-567890abcdef
+
+              Patient gets the latest fulfillment status of a healthcare lab test booking:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: status
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://example-bpp.com
+                    bpp_uri: https://example-bpp.com/beckn/
+                    transaction_id: a1b2c3d4-e5f6-4g7h-8i9j-klmno1p2q3r4
+                    message_id: x1y2z3a4-b5c6-7d8e-9f0g-1h2i3j4k5l6m
+                    timestamp: "2023-09-07T16:45:00.052Z"
+                  message:
+                    order_id: c4b0b371-0a6f-4a14-a49d-8cfd32c1e9a7
+
+              Get the latest status of a teleconsultation appointment:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: status
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://telehealth-provider.com
+                    bpp_uri: https://telehealth-provider.com/beckn/
+                    transaction_id: p1q2r3s4-t5u6v7w8x9y0z1
+                    message_id: m1n2o3p4-q5r6s7t8u9v0w1x2y3z4
+                    timestamp: "2023-09-07T17:15:00.052Z"
+                  message:
+                    order_id: telehealth-appointment-123
+
       responses:
         "200":
           description: Acknowledgement of message received
@@ -663,6 +1248,80 @@ paths:
               required:
                 - context
                 - message
+
+            examples:
+              Track the location of an ambulance:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: track
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://ambulance-provider.com
+                    bpp_uri: https://ambulance-provider.com/beckn/
+                    transaction_id: a1b2c3d4-e5f6-4g7h-8i9j-klmno1p2q3r4
+                    message_id: x1y2z3a4-b5c6-7d8e-9f0g-1h2i3j4k5l6m
+                    timestamp: "2023-09-08T10:30:00.052Z"
+                  message:
+                    order_id: ambulance-booking-123
+
+              Track the status of a teleconsultation appointment:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: track
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://telehealth-provider.com
+                    bpp_uri: https://telehealth-provider.com/beckn/
+                    transaction_id: p1q2r3s4-t5u6v7w8x9y0z1
+                    message_id: m1n2o3p4-q5r6s7t8u9v0w1x2y3z4
+                    timestamp: "2023-09-08T11:15:00.052Z"
+                  message:
+                    order_id: telehealth-appointment-456
+
+              Track the location of a medical supply delivery:
+                value:
+                  context:
+                    domain: nic2004:46494
+                    country: IND
+                    city: std:080
+                    action: track
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://medical-supply-provider.com
+                    bpp_uri: https://medical-supply-provider.com/beckn/
+                    transaction_id: d1e2l3i4v5e6r7y8-123
+                    message_id: m3e4d5i6c7a8l9-789
+                    timestamp: "2023-09-08T12:45:00.052Z"
+                  message:
+                    order_id: medical-supply-delivery-789
+
+              Track the status of a laboratory test:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: track
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://lab-service-provider.com
+                    bpp_uri: https://lab-service-provider.com/beckn/
+                    transaction_id: t1e2s3t4-1234
+                    message_id: l5a6b7-8901
+                    timestamp: "2023-09-08T13:30:00.052Z"
+                  message:
+                    order_id: lab-test-12345
+
       responses:
         "200":
           description: Acknowledgement of message received
@@ -723,6 +1382,140 @@ paths:
               required:
                 - context
                 - message
+
+            examples:
+              Cancel a teleconsultation appointment due to scheduling conflict:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: cancel
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://telehealth-provider.com
+                    bpp_uri: https://telehealth-provider.com/beckn/
+                    transaction_id: t1c2a3n4c5e6l7-12345
+                    message_id: c1a2n3c4e5l6-78901
+                    timestamp: "2023-09-08T14:30:00.052Z"
+                  message:
+                    order_id: telehealth-appointment-456
+                    cancellation_reason_id: "1"
+                    descriptor:
+                      short_desc: Scheduling Conflict
+                      long_desc: The patient had a conflicting appointment at the same time
+
+              Cancel a medical supply delivery due to unavailability:
+                value:
+                  context:
+                    domain: nic2004:46494
+                    country: IND
+                    city: std:080
+                    action: cancel
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://medical-supply-provider.com
+                    bpp_uri: https://medical-supply-provider.com/beckn/
+                    transaction_id: m1e2d3i4c5a6l7-12345
+                    message_id: c1a2n3c4e5l6-78901
+                    timestamp: "2023-09-08T15:45:00.052Z"
+                  message:
+                    order_id: medical-supply-delivery-789
+                    cancellation_reason_id: "3"
+                    descriptor:
+                      short_desc: Unavailability
+                      long_desc: The patient is currently unavailable to receive the delivery
+
+              Cancel a laboratory test appointment due to illness:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: cancel
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://lab-service-provider.com
+                    bpp_uri: https://lab-service-provider.com/beckn/
+                    transaction_id: c1a2n3c4e5l6-12345
+                    message_id: l1a2b3t4e5s6t-78901
+                    timestamp: "2023-09-08T16:15:00.052Z"
+                  message:
+                    order_id: lab-test-12345
+                    cancellation_reason_id: "2"
+                    descriptor:
+                      short_desc: Patient Illness
+                      long_desc: The patient is not feeling well and needs to reschedule the test
+
+              Cancel a home healthcare visit due to a change in plans:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: cancel
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://home-healthcare-provider.com
+                    bpp_uri: https://home-healthcare-provider.com/beckn/
+                    transaction_id: h1o2m3e4-12345
+                    message_id: c1a2n3c4e5l6-78901
+                    timestamp: "2023-09-08T17:30:00.052Z"
+                  message:
+                    order_id: home-healthcare-visit-678
+                    cancellation_reason_id: "4"
+                    descriptor:
+                      short_desc: Change in Plans
+                      long_desc: The patient's plans have changed, and the visit is no longer needed
+
+              Cancel a lab test appointment due to a change in doctor's recommendation:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: cancel
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://lab-service-provider.com
+                    bpp_uri: https://lab-service-provider.com/beckn/
+                    transaction_id: c1a2n3c4e5l6-12345
+                    message_id: lab-test-appointment-xyz
+                    timestamp: "2023-09-08T22:30:00.052Z"
+                  message:
+                    order_id: lab-test-appointment-456
+                    cancellation_reason_id: "8"
+                    descriptor:
+                      short_desc: Change in Doctor's Recommendation
+                      long_desc: The doctor recommended a change in the lab test, so the appointment is canceled
+
+              Cancel a medication delivery order due to duplicate request:
+                value:
+                  context:
+                    domain: nic2004:46494
+                    country: IND
+                    city: std:080
+                    action: cancel
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://pharmacy-provider.com
+                    bpp_uri: https://pharmacy-provider.com/beckn/
+                    transaction_id: c1a2n3c4e5l6-12345
+                    message_id: medication-delivery-567
+                    timestamp: "2023-09-08T21:00:00.052Z"
+                  message:
+                    order_id: medication-delivery-456
+                    cancellation_reason_id: "4"
+                    descriptor:
+                      short_desc: Duplicate Request
+                      long_desc: The patient mistakenly placed a duplicate order for medication
+
       responses:
         "200":
           description: Acknowledgement of message received
@@ -785,6 +1578,185 @@ paths:
               required:
                 - context
                 - message
+
+            examples:
+              Update fulfillment details for a healthcare service order:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: update
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://healthcare-provider.com
+                    bpp_uri: https://healthcare-provider.com/beckn/
+                    transaction_id: c1a2n3u4p5d6-12345
+                    message_id: update-fulfillment-1
+                    timestamp: "2023-09-09T10:00:00.052Z"
+                  message:
+                    update_target: fulfillment
+                    order:
+                      id: healthcare-service-order-1
+                      fulfillment:
+                        id: updated-fulfillment-1
+                        start:
+                          location:
+                            gps: 12.9715988, 77.5945627
+                            address:
+                              ward: Koramangala
+                              country: India
+                              building: Healthcare Center
+                              state: Karnataka
+                              city: Bengaluru
+                              locality: Koramangala 5th Block
+                              door: 123
+                              area_code: "560095"
+                              street: 5th Main Rd
+
+              Update billing details for a healthcare service order:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: update
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://telehealth-provider.com
+                    bpp_uri: https://telehealth-provider.com/beckn/
+                    transaction_id: c1a2n3u4p5d6-12345
+                    message_id: update-billing-1
+                    timestamp: "2023-09-09T11:00:00.052Z"
+                  message:
+                    update_target: billing
+                    order:
+                      id: teleconsultation-order-1
+                      billing:
+                        name: Updated Billing Name
+                        address: Updated Billing Address
+                        city:
+                          name: Updated Billing City
+                        state:
+                          name: Updated Billing State
+                        email: updated.billing@example.com
+                        phone: +91-9876543210
+
+              Update item details for a medication order:
+                value:
+                  context:
+                    domain: nic2004:46494
+                    country: IND
+                    city: std:080
+                    action: update
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://pharmacy-provider.com
+                    bpp_uri: https://pharmacy-provider.com/beckn/
+                    transaction_id: c1a2n3u4p5d6-12345
+                    message_id: update-item-1
+                    timestamp: "2023-09-09T12:00:00.052Z"
+                  message:
+                    update_target: item
+                    order:
+                      id: medication-order-1
+                      items:
+                        - id: updated-item-1
+                          descriptor:
+                            name: Updated Medication Name
+                          quantity: 5
+                        - id: updated-item-2
+                          descriptor:
+                            name: New Medication Name
+                          quantity: 3
+
+              Update fulfillment and billing details for a lab test order:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: update
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://lab-service-provider.com
+                    bpp_uri: https://lab-service-provider.com/beckn/
+                    transaction_id: c1a2n3u4p5d6-12345
+                    message_id: update-fulfillment-billing-1
+                    timestamp: "2023-09-09T13:00:00.052Z"
+                  message:
+                    update_target: fulfillment,billing
+                    order:
+                      id: lab-test-order-1
+                      fulfillment:
+                        id: updated-fulfillment-2
+                        start:
+                          location:
+                            gps: 12.9715988, 77.5945627
+                            address:
+                              ward: Indiranagar
+                              country: India
+                              building: Diagnostic Center
+                              state: Karnataka
+                              city: Bengaluru
+                              locality: Indiranagar 6th Block
+                              door: 456
+                              area_code: "560008"
+                              street: 6th Main Rd
+                      billing:
+                        name: Updated Billing Name 2
+                        address: Updated Billing Address 2
+                        city:
+                          name: Updated Billing City 2
+                        state:
+                          name: Updated Billing State 2
+                        email: updated.billing2@example.com
+                        phone: +91-9876543211
+
+              Update fulfillment and item details for a home healthcare visit order:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: update
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://home-healthcare-provider.com
+                    bpp_uri: https://home-healthcare-provider.com/beckn/
+                    transaction_id: c1a2n3u4p5d6-12345
+                    message_id: update-fulfillment-item-1
+                    timestamp: "2023-09-09T14:00:00.052Z"
+                  message:
+                    update_target: fulfillment,item
+                    order:
+                      id: home-healthcare-visit-order-1
+                      fulfillment:
+                        id: updated-fulfillment-3
+                        start:
+                          location:
+                            gps: 12.9715988, 77.5945627
+                            address:
+                              ward: Jayanagar
+                              country: India
+                              building: Patient's Residence
+                              state: Karnataka
+                              city: Bengaluru
+                              locality: Jayanagar 4th Block
+                              door: 789
+                              area_code: "560041"
+                              street: 4th Cross Rd
+                      items:
+                        - id: updated-item-3
+                          descriptor:
+                            name: Updated Service Name
+                          quantity: 2
+
       responses:
         "200":
           description: Acknowledgement of message received
@@ -841,6 +1813,119 @@ paths:
               required:
                 - context
                 - message
+
+            examples:
+              Provide a rating for a specific healthcare provider:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: rating
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://healthcare-provider.com
+                    bpp_uri: https://healthcare-provider.com/beckn/
+                    transaction_id: c1a2r3a4t5i6n7g8-12345
+                    message_id: rating-provider-1
+                    timestamp: "2023-09-09T22:00:00.052Z"
+                  message:
+                    ratings:
+                      - rating_category: Provider
+                        id: healthcare-provider-xyz
+                        value: 4
+
+              Provide a rating for a specific healthcare agent:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: rating
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://healthcare-provider.com
+                    bpp_uri: https://healthcare-provider.com/beckn/
+                    transaction_id: c1a2r3a4t5i6n7g8-12345
+                    message_id: rating-agent-1
+                    timestamp: "2023-09-09T23:00:00.052Z"
+                  message:
+                    ratings:
+                      - rating_category: Agent
+                        id: healthcare-agent-abc
+                        value: 5
+
+              Provide a rating for a specific support service:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: rating
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://healthcare-provider.com
+                    bpp_uri: https://healthcare-provider.com/beckn/
+                    transaction_id: c1a2r3a4t5i6n7g8-12345
+                    message_id: rating-support-service-1
+                    timestamp: "2023-09-10T00:00:00.052Z"
+                  message:
+                    ratings:
+                      - rating_category: Support
+                        id: support-service-xyz
+                        value: 4
+
+              Provide a rating for a specific healthcare order:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: rating
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://healthcare-provider.com
+                    bpp_uri: https://healthcare-provider.com/beckn/
+                    transaction_id: c1a2r3a4t5i6n7g8-12345
+                    message_id: rating-healthcare-order-1
+                    timestamp: "2023-09-10T01:00:00.052Z"
+                  message:
+                    ratings:
+                      - rating_category: Order
+                        id: healthcare-order-123
+                        value: 5
+
+              Provide ratings for a healthcare order, agent, and provider:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: rating
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://healthcare-provider.com
+                    bpp_uri: https://healthcare-provider.com/beckn/
+                    transaction_id: c1a2r3a4t5i6n7g8-12345
+                    message_id: rating-healthcare-1
+                    timestamp: "2023-09-10T03:00:00.052Z"
+                  message:
+                    ratings:
+                      - rating_category: Order
+                        id: healthcare-order-123
+                        value: 5
+                      - rating_category: Agent
+                        id: healthcare-agent-xyz
+                        value: 4
+                      - rating_category: Provider
+                        id: healthcare-provider-abc
+                        value: 4
+
       responses:
         "200":
           description: Acknowledgement of message received
@@ -895,6 +1980,115 @@ paths:
               required:
                 - context
                 - message
+
+            examples:
+              Contact support for a specific healthcare order:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: support
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://healthcare-provider.com
+                    bpp_uri: https://healthcare-provider.com/beckn/
+                    transaction_id: support-healthcare-order-123
+                    message_id: support-healthcare-1
+                    timestamp: "2023-09-15T10:30:00.052Z"
+                  message:
+                    ref_id: healthcare-order-123
+
+              Request support for a healthcare service issue:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: support
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://healthcare-provider.com
+                    bpp_uri: https://healthcare-provider.com/beckn/
+                    transaction_id: support-healthcare-service-issue
+                    message_id: support-healthcare-2
+                    timestamp: "2023-09-15T11:45:00.052Z"
+                  message:
+                    ref_id: healthcare-service-issue-456
+
+              Contact support for a billing-related healthcare inquiry:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: support
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://healthcare-provider.com
+                    bpp_uri: https://healthcare-provider.com/beckn/
+                    transaction_id: support-billing-inquiry
+                    message_id: support-healthcare-3
+                    timestamp: "2023-09-15T12:15:00.052Z"
+                  message:
+                    ref_id: billing-inquiry-789
+
+              Request support for a healthcare appointment scheduling issue:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: support
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://healthcare-provider.com
+                    bpp_uri: https://healthcare-provider.com/beckn/
+                    transaction_id: support-appointment-issue
+                    message_id: support-healthcare-4
+                    timestamp: "2023-09-15T13:30:00.052Z"
+                  message:
+                    ref_id: appointment-issue-101
+
+              Contact support for a prescription-related healthcare query:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: support
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bap_uri: https://example-bap.com/dhp.io
+                    bpp_id: https://healthcare-provider.com
+                    bpp_uri: https://healthcare-provider.com/beckn/
+                    transaction_id: support-prescription-query
+                    message_id: support-healthcare-5
+                    timestamp: "2023-09-15T14:45:00.052Z"
+                  message:
+                    ref_id: prescription-query-222
+
+              Request support for a healthcare service cancellation issue:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: support
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bpp_id: https://healthcare-provider.com
+                    bpp_uri: https://healthcare-provider.com/beckn/
+                    transaction_id: support-cancellation-issue
+                    message_id: support-healthcare-6
+                    timestamp: "2023-09-15T15:00:00.052Z"
+                  message:
+                    ref_id: cancellation-issue-333
+
       responses:
         "200":
           description: Acknowledgement of message received
@@ -954,6 +2148,39 @@ paths:
                 - context
 
             examples:
+              Catalog of Healthcare Providers for OPD services:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: on_search
+                    version: 0.7.1
+                    message_id: catalog-opd-1
+                    timestamp: "2023-09-15T10:00:00.052Z"
+                    ttl: PT10M
+                    location:
+                      country: IND
+                      city: std:080
+                  message:
+                    order:
+                      provider:
+                        id: 289edce4-d002-4962-b311-4c025e22b4f6
+                        descriptor:
+                          name: MAX Hospitals
+                        categories:
+                          - id: "1"
+                            descriptor:
+                              name: OPD
+                        fulfillments:
+                          - id: "1"
+                            type: OPD
+                          - id: "2"
+                            type: Diagnostics
+                          - id: "3"
+                            type: Emergency
+                    error:
+                      code: 200
+                      message: Success
+
               Catalog of Doctors with their availability schedule for DIGITAL OPD Fulfillment:
                 value:
                   context:
@@ -1058,28 +2285,135 @@ paths:
                             category_ids:
                               - 1
                             fulfillment_ids:
-                              - 1
+                              - id: 1
                           - id: "1"
                             descriptor:
                               name: Consultation
                             category_ids:
                               - 1
                             fulfillment_ids:
-                              - 2
+                              - id: 2
                           - id: "1"
                             descriptor:
                               name: Consultation
                             category_ids:
                               - 1
                             fulfillment_ids:
-                              - 3
+                              - id: 3
                           - id: "1"
                             descriptor:
                               name: Consultation
                             category_ids:
                               - 1
                             fulfillment_ids:
-                              - 4
+                              - id: 4
+
+              Catalog of Ambulances Service Available within 5km Radius:
+                value:
+                  context:
+                    domain: nic2004:86909
+                    action: on_search
+                    version: 0.7.1
+                    message_id: 12febf7a-4972-48b1-aad5-9e7adff50473
+                    timestamp: "2023-07-19T08:45:10.175Z"
+                    ttl: PT10M
+                    location:
+                      country: IND
+                      city: std:083
+                  message:
+                    order:
+                      provider:
+                        id: 4ab0cbbc-f246-4199-96c9-28a776d46c60
+                        descriptor:
+                          name: Ambulance Services XYZ
+                        categories:
+                          - id: "9"
+                            descriptor:
+                              name: Ambulance Services
+                        fulfillments:
+                          - id: "1"
+                            type: AMBULANCE-SERVICE
+                            agent:
+                              facility:
+                                id: "3"
+                                name: XYZ Ambulance Services
+                            schedule:
+                              - type: start
+                                time:
+                                  timestamp: "2023-09-15T08:00:00Z"
+                              - type: end
+                                time:
+                                  timestamp: "2023-09-15T20:00:00Z"
+
+              Catalog of Doctors Speaking Kannada with a Rating Greater Than 3:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: on_search
+                    version: 0.7.1
+                    message_id: c7f2d08b-19ad-487d-a25d-f8bf4128ad7e
+                    timestamp: "2023-07-20T14:20:55.310Z"
+                    ttl: PT10M
+                    location:
+                      country: IND
+                      city: std:084
+                  message:
+                    order:
+                      provider:
+                        id: 23847572-53a0-49f2-9159-6b89b0168f49
+                        descriptor:
+                          name: Kannada Healthcare Clinic
+                        categories:
+                          - id: "1"
+                            descriptor:
+                              name: OPD
+                          - id: "10"
+                            descriptor:
+                              name: Kannada-Speaking Doctors
+                        fulfillments:
+                          - id: "1"
+                            type: APPOINTMENT
+                            agent:
+                              person:
+                                id: "6"
+                                name: Dr. Kumar
+                                gender: male
+                                image: https://image/of/dr-kumar.png
+                                creds:
+                                  - id: license:65432
+                                ratings:
+                                  - rating_category: Doctor
+                                    id: dr-12345
+                                    value: 4.5
+                            schedule:
+                              - type: start
+                                time:
+                                  timestamp: "2023-09-15T09:00:00Z"
+                              - type: end
+                                time:
+                                  timestamp: "2023-09-15T17:00:00Z"
+                          - id: "2"
+                            type: APPOINTMENT
+                            agent:
+                              person:
+                                id: "7"
+                                name: Dr. Rao
+                                gender: male
+                                image: https://image/of/dr-rao.png
+                                creds:
+                                  - id: license:54321
+                                ratings:
+                                  - rating_category: Doctor
+                                    id: dr-67890
+                                    value: 4.8
+                            schedule:
+                              - type: start
+                                time:
+                                  timestamp: "2023-09-15T10:00:00Z"
+                              - type: end
+                                time:
+                                  timestamp: "2023-09-15T18:00:00Z"
+
       responses:
         "200":
           description: Acknowledgement of message received
@@ -1190,6 +2524,153 @@ paths:
                             price:
                               currency: INR
                               value: 5
+
+              Return a quote for a selected doctor appointment:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: on_select
+                    core_version: 1.1.0
+                    bap_id: https://healthcare-bap.com
+                    bap_uri: https://api.healthcare-bap.com/beckn/
+                    bpp_id: https://clinic-hospital.com
+                    bpp_uri: https://api.clinic-hospital.com/beckn/
+                    transaction_id: 7f9014b1-12a3-47ef-a6c5-5ebc0f189c12
+                    message_id: 9d734baf-2e9d-4d58-b9e3-8c9c02d06259
+                    timestamp: "2023-09-15T10:30:00Z"
+                  message:
+                    order:
+                      id: "987654"
+                      items:
+                        - id: "101"
+                          descriptor:
+                            name: Consultation with Dr. Smith
+                          fulfillment_id: "1"
+                          price:
+                            currency: INR
+                            value: "500"
+                        - id: "102"
+                          descriptor:
+                            name: Blood Test
+                          fulfillment_id: "2"
+                          price:
+                            currency: INR
+                            value: "200"
+                      provider:
+                        id: "xyz-clinic"
+                        descriptor:
+                          name: XYZ Clinic
+                      fulfillment:
+                        id: "1"
+                        start:
+                          location:
+                            descriptor:
+                              name: XYZ Clinic
+                            gps: 12.9611159, 77.6388509
+                          time:
+                            timestamp: "2023-09-16T10:00:00Z"
+                        end:
+                          location:
+                            descriptor:
+                              name: XYZ Clinic
+                            gps: 12.9611159, 77.6388509
+                          time:
+                            timestamp: "2023-09-16T11:00:00Z"
+                        agent:
+                          name: Dr. John Smith
+                          rateable: true
+                          rating: "4.8"
+                    quote:
+                      price:
+                        value: "700"
+                        currency: INR
+                      breakup:
+                        - title: Consultation with Dr. Smith
+                          price:
+                            currency: INR
+                            value: "500"
+                        - title: Blood Test
+                          price:
+                            currency: INR
+                            value: "200"
+                    payment:
+                      id: "1"
+                      mode: ONLINE
+                      status: PENDING
+
+              Return a quote for selected pharmacy products:
+                value:
+                  context:
+                    domain: nic2004:59120
+                    country: IND
+                    city: std:081
+                    action: on_select
+                    core_version: 1.1.0
+                    bap_id: https://pharmacy-bap.com
+                    bap_uri: https://api.pharmacy-bap.com/beckn/
+                    bpp_id: https://pharmacy-store.com
+                    bpp_uri: https://api.pharmacy-store.com/beckn/
+                    transaction_id: 4f632d81-92a1-4dbd-8274-7c536f9bdf0d
+                    message_id: c57cc72e-7c9d-4bb7-a6df-9a53a32ef1c2
+                    timestamp: "2023-09-15T14:45:00Z"
+                  message:
+                    order:
+                      id: "123456"
+                      items:
+                        - id: "201"
+                          descriptor:
+                            name: Pain Reliever
+                          fulfillment_id: "3"
+                          price:
+                            currency: INR
+                            value: "50"
+                        - id: "202"
+                          descriptor:
+                            name: Cough Syrup
+                          fulfillment_id: "4"
+                          price:
+                            currency: INR
+                            value: "40"
+                      provider:
+                        id: "abc-pharmacy"
+                        descriptor:
+                          name: ABC Pharmacy
+                      fulfillment:
+                        id: "3"
+                        start:
+                          location:
+                            descriptor:
+                              name: ABC Pharmacy
+                            gps: 12.965365, 77.607297
+                          time:
+                            timestamp: "2023-09-16T09:00:00Z"
+                        end:
+                          location:
+                            descriptor:
+                              name: ABC Pharmacy
+                            gps: 12.965365, 77.607297
+                          time:
+                            timestamp: "2023-09-16T18:00:00Z"
+                    quote:
+                      price:
+                        value: "90"
+                        currency: INR
+                      breakup:
+                        - title: Pain Reliever
+                          price:
+                            currency: INR
+                            value: "50"
+                        - title: Cough Syrup
+                          price:
+                            currency: INR
+                            value: "40"
+                    payment:
+                      id: "2"
+                      mode: CASH_ON_DELIVERY
+                      status: PENDING
+
       responses:
         "200":
           description: Acknowledgement of message received
@@ -1328,6 +2809,242 @@ paths:
                         url: payto://ban/98273982749428?amount=INR:110&ifsc=SBIN0000575&message=hello
                         type: PRE-ORDER
                         status: NOT-PAID
+
+              Book an Appointment with Dr. Smith (Online Payment):
+                value:
+                  context:
+                    domain: nic2004:85110
+                    country: IND
+                    city: std:080
+                    action: on_init
+                    core_version: 1.1.0
+                    bap_id: https://healthcare-bap.com
+                    bap_uri: https://api.healthcare-bap.com/beckn/
+                    bpp_id: https://clinic-hospital.com
+                    bpp_uri: https://api.clinic-hospital.com/beckn/
+                    transaction_id: a1b2c3d4-5678-90e1-2f3g-4h56i7j8k9l0
+                    message_id: 12345678-abcd-ef90-1234-567890abcdef
+                    timestamp: "2023-09-15T12:00:00Z"
+                  message:
+                    order:
+                      items:
+                        - id: "101"
+                          descriptor:
+                            name: Appointment with Dr. Smith
+                          fulfillment_id: "1"
+                          price:
+                            currency: INR
+                            value: "300"
+                      provider:
+                        id: "xyz-clinic"
+                        descriptor:
+                          name: XYZ Clinic
+                      fulfillment:
+                        id: "1"
+                        start:
+                          location:
+                            descriptor:
+                              name: XYZ Clinic
+                            gps: 12.9611159, 77.6388509
+                          time:
+                            timestamp: "2023-09-16T14:00:00Z"
+                        end:
+                          location:
+                            descriptor:
+                              name: XYZ Clinic
+                            gps: 12.9611159, 77.6388509
+                          time:
+                            timestamp: "2023-09-16T15:00:00Z"
+                        agent:
+                          name: Dr. John Smith
+                          rateable: true
+                          rating: "4.8"
+                    quote:
+                      price:
+                        value: "300"
+                        currency: INR
+                    payment:
+                      id: "1"
+                      type: ONLINE
+                      params:
+                        url: payto://ban/98273982749428?amount=INR:110&ifsc=SBIN0000575&message=hello
+                        amount: "300"
+                        currency: INR
+                        transaction_status: NOT-PAID
+
+              Book Lab Test at ABC Diagnostics (Offline Payment):
+                value:
+                  context:
+                    domain: nic2004:86900
+                    country: IND
+                    city: std:080
+                    action: on_init
+                    core_version: 1.1.0
+                    bap_id: https://healthcare-bap.com
+                    bap_uri: https://api.healthcare-bap.com/beckn/
+                    bpp_id: https://abc-diagnostics.com
+                    bpp_uri: https://api.abc-diagnostics.com/beckn/
+                    transaction_id: x1y2z3a4-b5c6-d7e8-f9g0-h1i2j3k4l5m6
+                    message_id: 98765432-dcba-ed98-7654-3210fedcba98
+                    timestamp: "2023-09-15T14:30:00Z"
+                  message:
+                    order:
+                      items:
+                        - id: "201"
+                          descriptor:
+                            name: Complete Blood Count (CBC)
+                          fulfillment_id: "1"
+                          price:
+                            currency: INR
+                            value: "800"
+                      provider:
+                        id: "abc-diagnostics-lab"
+                        descriptor:
+                          name: ABC Diagnostics Lab
+                      fulfillment:
+                        id: "1"
+                        start:
+                          location:
+                            descriptor:
+                              name: ABC Diagnostics Lab
+                            gps: 12.9634567, 77.6401234
+                          time:
+                            timestamp: "2023-09-16T10:00:00Z"
+                        end:
+                          location:
+                            descriptor:
+                              name: ABC Diagnostics Lab
+                            gps: 12.9634567, 77.6401234
+                          time:
+                            timestamp: "2023-09-16T11:00:00Z"
+                        agent:
+                          name: Lab Technician Jane
+                          rateable: true
+                          rating: "4.5"
+                    quote:
+                      price:
+                        value: "800"
+                        currency: INR
+                    payment:
+                      id: "1"
+                      type: OFFLINE
+                      params:
+                        amount: "800"
+                        currency: INR
+                        transaction_status: NOT-PAID
+
+              Hospital Admission at ABC Hospital (Pre-Order Payment):
+                value:
+                  context:
+                    domain: nic2004:86101
+                    action: on_init
+                    version: 1.0.0
+                    message_id: 9a48f3c1-5327-4d6e-aa48-1ec7d014af92
+                    timestamp: "2023-07-20T14:30:00.052Z"
+                    ttl: PT15M
+                    location:
+                      country: IND
+                      city: std:040
+                  message:
+                    order:
+                      id: "12345"
+                      state: "BOOKED"
+                      provider:
+                        id: "abc-hospital"
+                        descriptor:
+                          name: ABC Hospital
+                      items:
+                        - id: "101"
+                          descriptor:
+                            name: Hospital Admission
+                          fulfillment_id: "1"
+                          provider_id: "abc-hospital"
+                      billing:
+                        name: Sarah Johnson
+                        address: 123 Main Street, Hyderabad, 500001
+                        email: sarah@example.com
+                        phone: +91-9876543210
+                      fulfillment:
+                        id: "1"
+                        type: INPATIENT-ADMISSION
+                        agent:
+                          person:
+                            id: "doc123"
+                            name: Dr. Smith
+                            gender: male
+                          facility:
+                            id: "abc-hospital"
+                            name: ABC Hospital
+                        stops:
+                          - type: start
+                            time:
+                              timestamp: T09:00Z
+                          - type: end
+                            time:
+                              timestamp: T16:00Z
+                      quote:
+                        price:
+                          currency: INR
+                          value: "25000"
+                      payment:
+                        url: payto://ban/123456789?amount=INR:25000&ifsc=HDFC0000123&message=Hospital_Admission
+                        type: PRE-ORDER
+                        status: NOT-PAID
+
+              Home Nursing Service for Mrs. Patel (Pre-Order Payment):
+                value:
+                  context:
+                    domain: nic2004:86901
+                    action: on_init
+                    version: 1.0.0
+                    message_id: c98e4a1f-4c06-4ba5-9d35-8a5939c72021
+                    timestamp: "2023-08-05T10:15:00.052Z"
+                    ttl: PT20M
+                    location:
+                      country: IND
+                      city: std:020
+                  message:
+                    order:
+                      id: "78901"
+                      state: "BOOKED"
+                      provider:
+                        id: "nursing-care"
+                        descriptor:
+                          name: Comfort Nursing Care
+                      items:
+                        - id: "201"
+                          descriptor:
+                            name: Home Nursing Service
+                          fulfillment_id: "2"
+                          provider_id: "nursing-care"
+                      billing:
+                        name: Mrs. Patel
+                        address: 456 Elm Street, Mumbai, 400001
+                        email: patel@example.com
+                        phone: +91-9876543210
+                      fulfillment:
+                        id: "2"
+                        type: HOME-NURSING
+                        agent:
+                          person:
+                            id: "nurse567"
+                            name: Nurse Emily
+                        stops:
+                          - type: start
+                            time:
+                              timestamp: T14:00Z
+                          - type: end
+                            time:
+                              timestamp: T18:00Z
+                      quote:
+                        price:
+                          currency: INR
+                          value: "1200"
+                      payment:
+                        url: payto://ban/987654321?amount=INR:1200&ifsc=ICIC0000123&message=Home_Nursing
+                        type: PRE-ORDER
+                        status: NOT-PAID
+
       responses:
         "200":
           description: Acknowledgement of message received
@@ -1470,6 +3187,158 @@ paths:
                         url: payto://ban/98273982749428?amount=INR:110&ifsc=SBIN0000575&message=hello
                         type: PRE-ORDER
                         status: NOT-PAID
+
+              Confirm healthcare appointment order:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: on_confirm
+                    version: 0.7.1
+                    message_id: 85a422c4-2867-4d72-b5f5-d31588e2f7c5
+                    timestamp: "2023-07-16T16:00:24.052Z"
+                    ttl: PT10M
+                    location:
+                      country: IND
+                      city: std:080
+                    transaction_id: 8ad631e4-01e7-44e1-a999-db41ef0ae4f6
+                  message:
+                    order:
+                      id: "26492"
+                      provider:
+                        id: "1"
+                        descriptor:
+                          name: MAX Hospitals
+                      items:
+                        - id: "1"
+                          descriptor:
+                            name: Consultation
+                          fulfillment_id: "2"
+                          provider_id: "1"
+                      billing:
+                        name: John Doe
+                        address: Door 12, Salarpuria Greenage, Street No 7, Hosur Road, 560068
+                        email: john.doe@example.com
+                        phone: +91-9999999999
+                      fulfillment:
+                        id: "2"
+                        type: DIGITAL-OPD
+                        agent:
+                          person:
+                            id: "1"
+                            name: Dr. Asthana
+                            gender: male
+                            image: https://image/of/person.png
+                            creds:
+                              - id: smc:13-50839
+                        state:
+                          descriptor:
+                            code: PATIENT_IN_DWR
+                        stops:
+                          - type: start
+                            time:
+                              timestamp: T10:15Z
+                          - type: end
+                            time:
+                              timestamp: T10:30Z
+                      quote:
+                        price:
+                          currency: INR
+                          value: "120"
+                        breakup:
+                          - title: consultation
+                            price:
+                              currency: INR
+                              value: 100
+                          - title: phr_handling_fees
+                            price:
+                              currency: INR
+                              value: 10
+                          - title: cgst
+                            price:
+                              currency: INR
+                              value: 5
+                          - title: sgst
+                            price:
+                              currency: INR
+                              value: 5
+                      payment:
+                        url: payto://ban/98273982749428?amount=INR:110&ifsc=SBIN0000575&message=hello
+                        type: PRE-ORDER
+                        status: NOT-PAID
+
+                  Confirm prescription order with payment:
+                    value:
+                      context:
+                        domain: nic2004:47112
+                        action: on_confirm
+                        version: 1.0.0
+                        message_id: a48b1be2-42a7-4b45-bc4e-2e89b86f7e6d
+                        timestamp: "2023-08-21T12:30:00.000Z"
+                        ttl: PT15M
+                        location:
+                          country: IND
+                          city: std:080
+                        transaction_id: e3ddbbec-8a95-4b68-bf2c-3c087b92c3b0
+                      message:
+                        order:
+                          id: "98765"
+                          provider:
+                            id: "2"
+                            descriptor:
+                              name: ABC Pharmacy
+                          items:
+                            - id: "10"
+                              descriptor:
+                                name: Medication
+                              fulfillment_id: "22"
+                              provider_id: "2"
+                          billing:
+                            name: Jane Smith
+                            address: 123 Main Street, Bangalore, 560001
+                            email: jane.smith@example.com
+                            phone: +91-8888888888
+                          fulfillment:
+                            id: "22"
+                            type: IN-STORE-PICKUP
+                            agent:
+                              person:
+                                id: "5"
+                                name: Pharmacist John
+                                gender: male
+                                image: https://image/of/pharmacist.png
+                                creds:
+                                  - id: pdc:7865-09876
+                            state:
+                              descriptor:
+                                code: READY_FOR_PICKUP
+                            stops:
+                              - type: start
+                                time:
+                                  timestamp: T14:00Z
+                              - type: end
+                                time:
+                                  timestamp: T14:15Z
+                          quote:
+                            price:
+                              currency: INR
+                              value: "50"
+                            breakup:
+                              - title: medication
+                                price:
+                                  currency: INR
+                                  value: 40
+                              - title: service_fee
+                                price:
+                                  currency: INR
+                                  value: 10
+                          payment:
+                            type: ON-FULFILLMENT
+                            status: PAID
+                            params:
+                              amount: "50"
+                              currency: INR
+                              transaction_status: PAID
+
       responses:
         "200":
           description: Acknowledgement of message received
@@ -1495,6 +3364,526 @@ paths:
                     $ref: "#/components/schemas/Error"
                 required:
                   - message
+
+  /on_track:
+    post:
+      tags:
+        - Beckn App Platform (BAP)
+      description: Send tracking details of an active order
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context:
+                  allOf:
+                    - $ref: "#/components/schemas/Context"
+                    - properties:
+                        action:
+                          enum:
+                            - on_track
+                      required:
+                        - action
+                message:
+                  type: object
+                  properties:
+                    tracking:
+                      $ref: "#/components/schemas/Tracking"
+                  required:
+                    - tracking
+                error:
+                  $ref: "#/components/schemas/Error"
+              required:
+                - context
+
+            examples:
+              Return tracking information for an ambulance service:
+                value:
+                  context:
+                    country: IND
+                    domain: nic2004:85110
+                    city: std:080
+                    action: on_track
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bpp_id: https://ambulance-provider.com
+                    message_id: a1b2c3d4-e5f6-4g7h-8i9j-klmno1p2q3r4
+                    timestamp: "2023-09-08T10:30:00.052Z"
+                  message:
+                    tracking:
+                      content_type: application/json
+                      url: https://api.beckn.juspay.in/dobpp/ui/driver/location/abc9f0aa-bbfd-4e91-b378-41feee12f05f
+                      status: active
+                      location:
+                        descriptor:
+                          name: ABC Hospital
+                        gps: 12.9611159, 77.6388509
+                        address: 12, Salarpuria Greenage, Street No 7, Hosur Road, 560068
+
+              Track a medicine delivery:
+                value:
+                  context:
+                    country: IND
+                    domain: nic2004:47731
+                    city: std:080
+                    action: on_track
+                    core_version: 1.1.0
+                    bap_id: https://example-bap.com/
+                    bpp_id: https://pharmacy-provider.com
+                    message_id: p1h2a3r4m5a6c7y8-9d0e1l2i3v4e5r6y
+                    timestamp: "2023-09-08T13:15:00.321Z"
+                  message:
+                    tracking:
+                      content_type: application/json
+                      url: https://pharmacy-provider.com/track/medicine-delivery-789
+                      status: active
+                    location:
+                      descriptor:
+                        name: ABC Pharmacy
+                      gps: 12.971598, 77.598584
+                      address: 456, Health Street, Koramangala, Bangalore, 560095
+
+      responses:
+        "200":
+          description: Acknowledgement of message received
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: object
+                    properties:
+                      ack:
+                        $ref: "#/components/schemas/Ack"
+                    required:
+                      - ack
+                  error:
+                    $ref: "#/components/schemas/Error"
+                required:
+                  - message
+
+  /on_cancel:
+    post:
+      tags:
+        - Beckn App Platform (BAP)
+      description: Send cancellation request_id with reasons list in case of cancellation request. Else send cancelled order object
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context:
+                  allOf:
+                    - $ref: "#/components/schemas/Context"
+                    - properties:
+                        action:
+                          enum:
+                            - on_cancel
+                      required:
+                        - action
+                message:
+                  type: object
+                  properties:
+                    order:
+                      $ref: "#/components/schemas/Order"
+                  required:
+                    - order
+                error:
+                  $ref: "#/components/schemas/Error"
+              required:
+                - context
+
+            examples:
+              Return healthcare appointment cancellation by the patient:
+                value:
+                  context:
+                    country: IND
+                    bpp_uri: https://api.example-bpp.com/dobpp/beckn/7f7896dd-787e-4a0b-8675-e9e6fe93bb8f
+                    domain: nic2004:86211
+                    timestamp: "2023-09-23T15:30:00.987Z"
+                    bap_id: example-bap.com
+                    bpp_id: example-bpp.com
+                    transaction_id: c1a2n3c4e5l6l7a8t9i0o1n2-1b2y3p4a5t6i7e8n9t
+                    message_id: p4a5t6i7e8n9t-8c9a0n1c2e3l4l5a6t7i8o9n
+                    city: std:080
+                    core_version: 1.1.0
+                    action: on_cancel
+                    bap_uri: https://api.example-bap.com/pilot/bap/healthcare/v1
+                  message:
+                    order:
+                      id: 12345
+                      provider:
+                        id: hospital-xyz
+                        descriptor:
+                          name: XYZ Hospital
+                      patient:
+                        id: patient-abc
+                        descriptor:
+                          name: John Doe
+                      items:
+                        - id: service-001
+                          descriptor:
+                            name: MRI Scan
+                          tags:
+                            groups/1/descriptor/name: Scan Type
+                            groups/1/list/1/descriptor/name: Brain MRI
+                            groups/1/list/1/value: ₹ 5000
+                      quote:
+                        value: "5000"
+                        currency: INR
+                      fulfillment:
+                        id: fulf_12345
+                        state:
+                          descriptor:
+                            code: APPOINTMENT_CANCELLED
+                            name: Appointment Cancelled
+                        start:
+                          authorization:
+                            type: OTP
+                            token: "987654"
+                          location:
+                            gps: 12.345678, 98.765432
+                            address:
+                              country: India
+                              state: Karnataka
+                              city: Bengaluru
+                              street: Main Street
+                              area_code: "560001"
+                        end:
+                          location:
+                            gps: 12.345678, 98.765432
+                            address:
+                              country: India
+                              state: Karnataka
+                              city: Bengaluru
+                              street: Main Street
+                              area_code: "560001"
+                      agent:
+                        name: Dr. Jane Smith
+                        phone: +91-9876543210
+                        rateable: true
+                        rating: "4.5"
+                    payments:
+                      - id: c1a2n3c4e5l6l7a8t9i0o1n2-8p9a0t1i2e3n4t
+                        type: POST-FULFILLMENT
+                        params:
+                          amount: "5000"
+                          currency: INR
+                          transaction_status: CANCELLED
+                    documents:
+                      - label: Cancellation Terms
+                        url: https://example-bpp.com/cancellation-terms
+
+              Return ambulance service cancellation by the patient:
+                value:
+                  context:
+                    country: IND
+                    bpp_uri: https://api.health-bpp.com/dobpp/beckn/7f7896dd-787e-4a0b-8675-e9e6fe93bb8f
+                    domain: nic2004:85110
+                    timestamp: "2023-09-26T09:45:00.987Z"
+                    bap_id: health-bap.com
+                    bpp_id: health-ambulance.com
+                    transaction_id: p4a5t6i7e8n9t-8c9a0n1c2e3l4l5a6t7i8o9n
+                    message_id: a8n7o6t5h4e3r2-1c0a9n8c7e6l5l4a3t2i1o0n
+                    city: std:082
+                    core_version: 1.1.0
+                    action: on_cancel
+                    bap_uri: https://api.health-bap.com/pilot/bap/ambulance/v1
+                  message:
+                    order:
+                      id: ambulance-123
+                      provider:
+                        id: ambulance-service-xyz
+                        descriptor:
+                          name: XYZ Ambulance Service
+                      patient:
+                        id: patient-123
+                        descriptor:
+                          name: Mary Johnson
+                      quote:
+                        value: "1500"
+                        currency: INR
+                      fulfillment:
+                        id: fulf_ambulance-123
+                        state:
+                          descriptor:
+                            code: SERVICE_CANCELLED
+                            name: Service Cancelled
+                        start:
+                          authorization:
+                            type: OTP
+                            token: "123456"
+                          location:
+                            gps: 12.345678, 98.765432
+                            address:
+                              country: India
+                              state: Karnataka
+                              city: Bangalore
+                              street: Emergency Avenue
+                              area_code: "560003"
+                        end:
+                          location:
+                            gps: 12.345678, 98.765432
+                            address:
+                              country: India
+                              state: Karnataka
+                              city: Bangalore
+                              street: Emergency Avenue
+                              area_code: "560003"
+                      agent:
+                        name: Paramedic John
+                        phone: +91-9876543210
+                        rateable: true
+                        rating: "4.7"
+                    payments:
+                      - id: p4a5t6i7e8n9t-8p9a0t1i2e3n4t
+                        type: POST-FULFILLMENT
+                        params:
+                          amount: "1500"
+                          currency: INR
+                          transaction_status: CANCELLED
+                    documents:
+                      - label: Cancellation Policy
+                        url: https://health-ambulance.com/cancellation-policy
+
+      responses:
+        "200":
+          description: Acknowledgement of message received
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: object
+                    properties:
+                      ack:
+                        $ref: "#/components/schemas/Ack"
+                    required:
+                      - ack
+                  error:
+                    $ref: "#/components/schemas/Error"
+                required:
+                  - message
+
+  /on_update:
+    post:
+      tags:
+        - Beckn App Platform (BAP)
+      description: Returns updated service with updated runtime object
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context:
+                  allOf:
+                    - $ref: "#/components/schemas/Context"
+                    - properties:
+                        action:
+                          enum:
+                            - on_update
+                      required:
+                        - action
+                message:
+                  type: object
+                  properties:
+                    order:
+                      $ref: "#/components/schemas/Order"
+                  required:
+                    - order
+                error:
+                  $ref: "#/components/schemas/Error"
+              required:
+                - context
+
+            examples:
+              Return updated healthcare appointment order with updated fulfillment information:
+                value:
+                  context:
+                    country: IND
+                    bpp_uri: https://api.example-bpp.com/dobpp/beckn/7f7896dd-787e-4a0b-8675-e9e6fe93bb8f
+                    domain: nic2004:86211
+                    timestamp: "2023-09-23T15:30:00.987Z"
+                    bap_id: example-bap.com
+                    bpp_id: example-bpp.com
+                    transaction_id: b580c989-f84d-4abe-af28-2c818aafce3b
+                    message_id: 8926b747-0362-4fcc-b795-0994a6287700
+                    city: std:080
+                    core_version: 1.1.0
+                    action: on_update
+                    bap_uri: https://api.example-bap.com/pilot/bap/healthcare/v1
+                  message:
+                    update_target: order.fulfillment
+                    order:
+                      id: 56789
+                      provider:
+                        id: hospital-xyz
+                        descriptor:
+                          name: XYZ Hospital
+                      patient:
+                        id: patient-abc
+                        descriptor:
+                          name: John Doe
+                      items:
+                        - id: service-001
+                          descriptor:
+                            name: MRI Scan
+                          tags:
+                            groups/1/descriptor/name: Scan Type
+                            groups/1/list/1/descriptor/name: Brain MRI
+                            groups/1/list/1/value: ₹ 5000
+                      quote:
+                        value: "5000"
+                        currency: INR
+                      fulfillment:
+                        id: fulf_56789
+                        state:
+                          descriptor:
+                            code: RESCHEDULED
+                            name: Appointment Rescheduled
+                        start:
+                          authorization:
+                            type: OTP
+                            token: "234567"
+                          location:
+                            gps: 12.345678, 98.765432
+                            address:
+                              country: India
+                              state: Karnataka
+                              city: Bengaluru
+                              street: Main Street
+                              area_code: "560001"
+                        end:
+                          location:
+                            gps: 12.345678, 98.765432
+                            address:
+                              country: India
+                              state: Karnataka
+                              city: Bengaluru
+                              street: Main Street
+                              area_code: "560001"
+                        agent:
+                          name: Dr. Jane Smith
+                          phone: +91-9876543210
+                          rateable: true
+                          rating: "4.5"
+
+                  Return updated healthcare appointment order with updated quote information:
+                    value:
+                      context:
+                        country: IND
+                        bpp_uri: https://api.example-bpp.com/dobpp/beckn/7f7896dd-787e-4a0b-8675-e9e6fe93bb8f
+                        domain: nic2004:86211
+                        timestamp: "2023-09-23T15:30:00.987Z"
+                        bap_id: example-bap.com
+                        bpp_id: example-bpp.com
+                        transaction_id: b580c989-f84d-4abe-af28-2c818aafce3b
+                        message_id: 8926b747-0362-4fcc-b795-0994a6287700
+                        city: std:080
+                        core_version: 1.1.0
+                        action: on_update
+                        bap_uri: https://api.example-bap.com/pilot/bap/healthcare/v1
+                      message:
+                        update_target: order.quote
+                        order:
+                          id: 56789
+                          provider:
+                            id: hospital-xyz
+                            descriptor:
+                              name: XYZ Hospital
+                          patient:
+                            id: patient-abc
+                            descriptor:
+                              name: John Doe
+                          items:
+                            - id: service-001
+                              descriptor:
+                                name: MRI Scan
+                              tags:
+                                groups/1/descriptor/name: Scan Type
+                                groups/1/list/1/descriptor/name: Brain MRI
+                                groups/1/list/1/value: ₹ 5000
+                          quote:
+                            value: "5500"
+                            currency: INR
+                            breakup:
+                              - title: Base Fare
+                                price:
+                                  value: "3000"
+                                  currency: INR
+                              - title: Per km fare
+                                price:
+                                  value: "2400"
+                                  currency: INR
+                              - title: CGST @ 5%
+                                price:
+                                  value: "50"
+                                  currency: INR
+                              - title: SGST @ 5%
+                                price:
+                                  value: "50"
+                                  currency: INR
+                          fulfillment:
+                            id: fulf_56789
+                            state:
+                              descriptor:
+                                code: APPOINTMENT_CONFIRMED
+                                name: Appointment Confirmed
+                            start:
+                              authorization:
+                                type: OTP
+                                token: "234567"
+                              location:
+                                gps: 12.345678, 98.765432
+                                address:
+                                  country: India
+                                  state: Karnataka
+                                  city: Bengaluru
+                                  street: Main Street
+                                  area_code: "560001"
+                            end:
+                              location:
+                                gps: 12.345678, 98.765432
+                                address:
+                                  country: India
+                                  state: Karnataka
+                                  city: Bengaluru
+                                  street: Main Street
+                                  area_code: "560001"
+                            agent:
+                              name: Dr. Jane Smith
+                              phone: +91-9876543210
+                              rateable: true
+                              rating: "4.5"
+
+      responses:
+        "200":
+          description: Acknowledgement of message received
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: object
+                    properties:
+                      ack:
+                        $ref: "#/components/schemas/Ack"
+                    required:
+                      - ack
+                  error:
+                    $ref: "#/components/schemas/Error"
+                required:
+                  - message
+
   /on_status:
     post:
       tags:
@@ -1977,6 +4366,147 @@ paths:
                                 enum:
                                   - ACK
                                   - NACK
+                    required:
+                      - ack
+                  error:
+                    $ref: "#/components/schemas/Error"
+                required:
+                  - message
+
+  /on_rating:
+    post:
+      tags:
+        - Beckn App Platform (BAP)
+      description: Provide feedback on a service
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context:
+                  allOf:
+                    - $ref: "#/components/schemas/Context"
+                    - properties:
+                        action:
+                          enum:
+                            - on_rating
+                      required:
+                        - action
+                message:
+                  type: object
+                  properties:
+                    feedback_form:
+                      description: A feedback form to allow the user to provide additional information on the rating provided
+                      allOf:
+                        - $ref: "#/components/schemas/XInput"
+                error:
+                  $ref: "#/components/schemas/Error"
+              required:
+                - context
+                - message
+
+            examples:
+              Return acknowledgement of rating and feedback:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: on_rating
+                    version: 0.7.1
+                    message_id: 85a422c4-2867-4d72-b5f5-d31588e2f7c5
+                    timestamp: "2023-07-16T16:00:24.052Z"
+                    ttl: PT10M
+                    location:
+                      country: IND
+                      city: std:080
+                    transaction_id: 8ad631e4-01e7-44e1-a999-db41ef0ae4f6
+                  message:
+                    feedback_ack: true
+                    rating_ack: true
+
+      responses:
+        "200":
+          description: Acknowledgement of message received
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: object
+                    properties:
+                      ack:
+                        $ref: "#/components/schemas/Ack"
+                    required:
+                      - ack
+                  error:
+                    $ref: "#/components/schemas/Error"
+                required:
+                  - message
+
+  /on_support:
+    post:
+      tags:
+        - Beckn App Platform (BAP)
+      description: Contact Support
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context:
+                  allOf:
+                    - $ref: "#/components/schemas/Context"
+                    - properties:
+                        action:
+                          enum:
+                            - on_support
+                      required:
+                        - action
+                message:
+                  type: object
+                  properties:
+                    support:
+                      $ref: "#/components/schemas/Support"
+                error:
+                  $ref: "#/components/schemas/Error"
+              required:
+                - context
+
+            examples:
+              Return support information:
+                value:
+                  context:
+                    domain: nic2004:85110
+                    action: on_support
+                    version: 0.7.1
+                    message_id: catalog-opd-1
+                    timestamp: "2023-09-15T10:00:00.052Z"
+                    ttl: PT10M
+                    location:
+                      country: IND
+                      city: std:080
+                  message:
+                    phone: "+91-9876543210"
+                    email: support@bpp.com
+                    url: http://support.bpp.com/contact-us
+
+      responses:
+        "200":
+          description: Acknowledgement of message received
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: object
+                    properties:
+                      ack:
+                        $ref: "#/components/schemas/Ack"
                     required:
                       - ack
                   error:

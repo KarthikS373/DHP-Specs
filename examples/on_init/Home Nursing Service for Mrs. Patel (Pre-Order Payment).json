@@ -1,0 +1,77 @@
+{
+  "context": {
+    "domain": "nic2004:86901",
+    "action": "on_init",
+    "version": "1.0.0",
+    "message_id": "c98e4a1f-4c06-4ba5-9d35-8a5939c72021",
+    "timestamp": "2023-08-05T10:15:00.052Z",
+    "ttl": "PT20M",
+    "location": {
+      "country": "IND",
+      "city": "std:020"
+    }
+  },
+  "message": {
+    "order": {
+      "id": "78901",
+      "state": "BOOKED",
+      "provider": {
+        "id": "nursing-care",
+        "descriptor": {
+          "name": "Comfort Nursing Care"
+        }
+      },
+      "items": [
+        {
+          "id": "201",
+          "descriptor": {
+            "name": "Home Nursing Service"
+          },
+          "fulfillment_id": "2",
+          "provider_id": "nursing-care"
+        }
+      ],
+      "billing": {
+        "name": "Mrs. Patel",
+        "address": "456 Elm Street, Mumbai, 400001",
+        "email": "patel@example.com",
+        "phone": "+91-9876543210"
+      },
+      "fulfillment": {
+        "id": "2",
+        "type": "HOME-NURSING",
+        "agent": {
+          "person": {
+            "id": "nurse567",
+            "name": "Nurse Emily"
+          }
+        },
+        "stops": [
+          {
+            "type": "start",
+            "time": {
+              "timestamp": "T14:00Z"
+            }
+          },
+          {
+            "type": "end",
+            "time": {
+              "timestamp": "T18:00Z"
+            }
+          }
+        ]
+      },
+      "quote": {
+        "price": {
+          "currency": "INR",
+          "value": "1200"
+        }
+      },
+      "payment": {
+        "url": "payto://ban/987654321?amount=INR:1200&ifsc=ICIC0000123&message=Home_Nursing",
+        "type": "PRE-ORDER",
+        "status": "NOT-PAID"
+      }
+    }
+  }
+}

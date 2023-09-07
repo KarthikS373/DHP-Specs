@@ -1,0 +1,19 @@
+{
+  "context": {
+    "domain": "nic2004:85110",
+    "action": "on_support",
+    "version": "0.7.1",
+    "message_id": "catalog-opd-1",
+    "timestamp": "2023-09-15T10:00:00.052Z",
+    "ttl": "PT10M",
+    "location": {
+      "country": "IND",
+      "city": "std:080"
+    }
+  },
+  "message": {
+    "phone": "+91-9876543210",
+    "email": "support@bpp.com",
+    "url": "http://support.bpp.com/contact-us"
+  }
+}

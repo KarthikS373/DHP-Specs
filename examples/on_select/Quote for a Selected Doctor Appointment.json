@@ -1,0 +1,108 @@
+{
+  "context": {
+    "domain": "nic2004:85110",
+    "country": "IND",
+    "city": "std:080",
+    "action": "on_select",
+    "core_version": "1.1.0",
+    "bap_id": "https://healthcare-bap.com",
+    "bap_uri": "https://api.healthcare-bap.com/beckn/",
+    "bpp_id": "https://clinic-hospital.com",
+    "bpp_uri": "https://api.clinic-hospital.com/beckn/",
+    "transaction_id": "7f9014b1-12a3-47ef-a6c5-5ebc0f189c12",
+    "message_id": "9d734baf-2e9d-4d58-b9e3-8c9c02d06259",
+    "timestamp": "2023-09-15T10:30:00Z"
+  },
+  "message": {
+    "order": {
+      "id": "987654",
+      "items": [
+        {
+          "id": "101",
+          "descriptor": {
+            "name": "Consultation with Dr. Smith"
+          },
+          "fulfillment_id": "1",
+          "price": {
+            "currency": "INR",
+            "value": "500"
+          }
+        },
+        {
+          "id": "102",
+          "descriptor": {
+            "name": "Blood Test"
+          },
+          "fulfillment_id": "2",
+          "price": {
+            "currency": "INR",
+            "value": "200"
+          }
+        }
+      ],
+      "provider": {
+        "id": "xyz-clinic",
+        "descriptor": {
+          "name": "XYZ Clinic"
+        }
+      },
+      "fulfillment": {
+        "id": "1",
+        "start": {
+          "location": {
+            "descriptor": {
+              "name": "XYZ Clinic"
+            },
+            "gps": "12.9611159, 77.6388509"
+          },
+          "time": {
+            "timestamp": "2023-09-16T10:00:00Z"
+          }
+        },
+        "end": {
+          "location": {
+            "descriptor": {
+              "name": "XYZ Clinic"
+            },
+            "gps": "12.9611159, 77.6388509"
+          },
+          "time": {
+            "timestamp": "2023-09-16T11:00:00Z"
+          }
+        },
+        "agent": {
+          "name": "Dr. John Smith",
+          "rateable": true,
+          "rating": "4.8"
+        }
+      },
+      "quote": {
+        "price": {
+          "value": "700",
+          "currency": "INR"
+        },
+        "breakup": [
+          {
+            "title": "Consultation with Dr. Smith",
+            "price": {
+              "currency": "INR",
+              "value": "500"
+            }
+          },
+          {
+            "title": "Blood Test",
+            "price": {
+              "currency": "INR",
+              "value": "200"
+            }
+          }
+        ]
+      },
+      "payment": {
+        "id": "1",
+        "mode": "ONLINE",
+        "status": "PENDING"
+      }
+    }
+  }
+}

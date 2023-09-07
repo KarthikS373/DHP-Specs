@@ -1,0 +1,20 @@
+{
+  "context": {
+    "domain": "nic2004:85110",
+    "country": "IND",
+    "city": "std:080",
+    "action": "track",
+    "core_version": "1.1.0",
+    "bap_id": "https://example-bap.com/",
+    "bap_uri": "https://example-bap.com/dhp.io",
+    "bpp_id": "https://lab-service-provider.com",
+    "bpp_uri": "https://lab-service-provider.com/beckn/",
+    "transaction_id": "t1e2s3t4-1234",
+    "message_id": "l5a6b7-8901",
+    "timestamp": "2023-09-08T13:30:00.052Z"
+  },
+  "message": {
+    "order_id": "lab-test-12345",
+    "callback_url": "https://user-app.com/track/callback"
+  }
+}

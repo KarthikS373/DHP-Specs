@@ -1,0 +1,60 @@
+{
+  "context": {
+    "domain": "nic2004:85110",
+    "action": "confirm",
+    "version": "0.7.1",
+    "bap_id": "https://example-bap.com/",
+    "bap_uri": "https://example-bap.com/dhp.io",
+    "message_id": "f243d75d-1fc8-4c15-ae74-7af398c13b44",
+    "timestamp": "2023-09-15T14:15:00.052Z",
+    "ttl": "PT10M",
+    "location": {
+      "city": "std:080",
+      "country": "IND"
+    }
+  },
+  "message": {
+    "order": {
+      "id": "a1b2c3d4-e5f6-4g7h-8i9j-klmno1p2q3r4",
+      "provider": {
+        "id": "xyz-provider-123",
+        "descriptor": {
+          "name": "HealthCare Center Z"
+        }
+      },
+      "items": [
+        {
+          "id": "12345678-90ab-cdef-1234-567890abcdef",
+          "descriptor": {
+            "name": "Cardiology Consultation",
+            "code": "CARDIO"
+          },
+          "billing": {
+            "name": "Jane Doe",
+            "address": "789 Elm Street, Medtown, 54321",
+            "city": {
+              "name": "Medtown"
+            },
+            "state": {
+              "name": "HealthState"
+            },
+            "email": "jane.doe@example.com",
+            "phone": "+1-234-567-8901"
+          },
+          "fulfillment": {
+            "customer": {
+              "person": {
+                "id": "5678-9012-abcd-3456-7890efabcd12",
+                "creds": [
+                  {
+                    "url": "example@healthcarez.com"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

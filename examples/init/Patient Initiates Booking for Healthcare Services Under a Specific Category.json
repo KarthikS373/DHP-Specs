@@ -1,0 +1,63 @@
+{
+  "context": {
+    "domain": "nic2004:85110",
+    "action": "init",
+    "version": "0.7.1",
+    "bap_id": "https://example-bap.com/",
+    "bap_uri": "https://example-bap.com/dhp.io",
+    "message_id": "2e1f0ce3-91e3-43f4-b2b6-1a8f64ea7bb1",
+    "timestamp": "2023-07-22T10:45:00.052Z",
+    "ttl": "PT10M",
+    "location": {
+      "city": "std:080",
+      "country": "IND"
+    }
+  },
+  "message": {
+    "order": {
+      "provider": {
+        "id": "4"
+      },
+      "items": [
+        {
+          "id": "f3f1a5c4-5da2-41f9-8e17-ecb0df1c9bb5",
+          "fulfillment_id": [
+            "ae55001e-252b-11ee-be56-0242ac120002",
+            "b0c3f7c2-252b-11ee-be56-ef5464fda652"
+          ]
+        },
+        {
+          "id": "f2d0f8b0-26e5-4ce6-8f3e-536d8ae8ac45",
+          "fulfillment_id": [
+            "d1d42dd2-252b-11ee-be56-0242ac120002",
+            "d4d2c020-252b-11ee-be56-ef5464fda652"
+          ]
+        }
+      ],
+      "billing": {
+        "name": "John Doe",
+        "address": "Flat 102, Serene Springs, JP Nagar, 560078",
+        "city": {
+          "name": "Bangalore"
+        },
+        "state": {
+          "name": "Karnataka"
+        },
+        "email": "john.doe@example.com",
+        "phone": "+91-8888888888"
+      },
+      "fulfillment": {
+        "customer": {
+          "person": {
+            "id": "64-4321-5678-1234",
+            "creds": [
+              {
+                "url": "more@example.com"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
