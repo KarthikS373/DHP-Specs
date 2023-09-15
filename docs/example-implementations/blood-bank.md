@@ -7,7 +7,7 @@ This document outlines the workflow for checking the availability of blood from 
 A typical workflow for blood bank availability consists of the following steps:
 
 **Step 1: BAP user declares intent** \
-The BAP user initiates the process by declaring their intent to check the availability of blood from a specific blood bank. The user provides details such as the type of blood needed (e.g., O+ve) and the quantity required.
+The BAP user initiates the process by declaring their intent to check the availability of blood from a specific blood bank. The user provides details such as the type of blood needed (Eg: O+ve) and the quantity required.
 
 **Step 2: BPP responds with blood availability** \
 The BPP, the Blood Bank Platform Provider, checks the availability of the requested blood type and quantity at the specified blood bank. The BPP responds to the user with information about the availability, including the number of units available.
@@ -31,13 +31,13 @@ After the blood collection is completed, the user may need to make payment for t
 The user has the option to provide feedback on the blood collection process and the quality of service received from the blood bank.
 
 **Step 9: Service completion** \
-The BPP sends service completion details to the user, including a summary of the transaction, charges incurred, and any feedback provided by the user
+The BPP sends service completion details to the user, including a summary of the transaction, charges incurred and any feedback provided by the user
 
 ## Search (Checking Blood Bank Availability)
 
 ### User side Actions
 
-- A user in need of blood declares their intent to check the availability of a specific blood type at a particular blood bank. The user provides details such as the blood type (e.g., O+ve) and the quantity required (e.g., 3 units).
+- A user in need of blood declares their intent to check the availability of a specific blood type at a particular blood bank. The user provides details such as the blood type (Eg: O+ve) and the quantity required (Eg: 3 units).
 
 ### Provider side Actions
 
@@ -474,7 +474,7 @@ The logical workflow of this interaction is represented in the following sequenc
 
 ### Beckn Protocol API Workflow:
 
-In this API workflow, the user's Beckn Application Platform (BAP) initiates the confirmation (confirm) of the blood availability from the selected blood bank. The provider's Beckn Provider Platform (BPP) responds with an active confirmation (on_confirm). Subsequently, the user can request status updates (status), and the provider sends status updates (on_status) at various stages of the blood availability process. The final step involves providing the certificate and additional status updates (on_update) upon successful blood collection
+In this API workflow, the user's Beckn Application Platform (BAP) initiates the confirmation (confirm) of the blood availability from the selected blood bank. The provider's Beckn Provider Platform (BPP) responds with an active confirmation (on_confirm). Subsequently, the user can request status updates (status) and the provider sends status updates (on_status) at various stages of the blood availability process. The final step involves providing the certificate and additional status updates (on_update) upon successful blood collection
 
 ```mermaid
     sequenceDiagram
@@ -1004,7 +1004,7 @@ In this API workflow, the user's Beckn Application Platform (BAP) initiates the 
 
 ## Support for Blood Bank Services
 
-In this stage, the user can request support related to blood bank availability, and the blood bank service provider (BPP) will provide the necessary assistance
+In this stage, the user can request support related to blood bank availability and the blood bank service provider (BPP) will provide the necessary assistance
 
 ### User side actions
 
